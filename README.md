@@ -40,8 +40,16 @@
 }
 ```
 
-Run
+#### Run
 
 ```
 ./web-monitor -u http://localhost
+```
+
+Or 
+
+`crontab -e`
+
+```
+*/30 * * * * /web-monitor/web-monitor -u http://localhost:443 >> /web-monitor/log.txt
 ```
