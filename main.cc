@@ -209,9 +209,10 @@ int main(int argc, char **argv) {
             httplib::Client cli(json->get("EndPoint").convert<std::string>());
             auto res = cli.Get(url);
 
-            std::cout << "API HTTP code: " << res->status << std::endl;
-            if (res->status != 200) {
-                std::cout << "API response: " << res->body << std::endl;
+            if (res->status == 200) {
+                std::cout << "send success: " << res->status << std::endl;
+            } else {
+                std::cout << "send fail, code:  " << res->status << ", body: " << res->body << std::endl;
             }
         }
 
