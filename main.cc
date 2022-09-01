@@ -105,7 +105,7 @@ std::string encode(std::string str) {
 
     str = Poco::replace(str, "%3A", "%253A");
     str = Poco::replace(str, "%7E", "~");
-    str = Poco::replace(str, "+", "%20");
+    str = Poco::replace(str, "+", "%2B");
     str = Poco::replace(str, ":", "%3A");
     str = Poco::replace(str, "*", "%2A");
     str = Poco::replace(str, "/", "%2F");
@@ -119,11 +119,13 @@ std::string sign(const std::string &security_key, const std::string &str) {
     Poco::HMACEngine<Poco::SHA1Engine> hmac(security_key);
     hmac.update(str);
     auto digest = hmac.digest();
-    std::ostringstream oss;
-    Poco::Base64Encoder encoder(oss);
-    encoder << digest.data();
+    std::stringstream ss;
+    Poco::Base64Encoder encoder(ss);
+    for (const auto &item: digest) {
+        encoder << item;
+    }
     encoder.close();
-    return oss.str();
+    return ss.str();
 }
 
 // Build url and encode key/value

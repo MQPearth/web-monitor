@@ -33,10 +33,10 @@
     "ransom",
     "money"
   ],
-  //连接超时时间 单位ms
-  "ConnectionTimeout": 300,
-  //内容读取时间 单位s
-  "ReadTimeout": 2
+  //连接超时时间 示例: 300ms
+  "ConnectionTimeout": 300000,
+  //内容读取时间 示例: 300ms
+  "ReadTimeout": 300000
 }
 ```
 
