@@ -1,0 +1,15 @@
+{
+  "EndPoint": "http://dysmsapi.aliyuncs.com",
+  "AccessKeyId": "*******",
+  "AccessKeySecret": "*******",
+  "SignName": "*******",
+  "TemplateCode": "*******",
+  "RegionId": "cn-shenzhen",
+  "HackedWords": [
+    "ransom",
+    "money"
+  ],
+  "PhoneNumbers": "*******",
+  "ConnectionTimeout": 300,
+  "ReadTimeout": 2000
+}
