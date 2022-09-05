@@ -2,7 +2,7 @@
 #include "map"
 
 
-// require this 'define` for support https
+// require this 'define' for support https
 #define CPPHTTPLIB_OPENSSL_SUPPORT
 
 #include "httplib/httplib.h"
@@ -221,6 +221,6 @@ int main(int argc, char **argv) {
     } catch (std::exception &e) {
         std::cout << e.what() << std::endl;
     }
-
+    std::cout << "web-monitor end" << std::endl;
     return 0;
 }
