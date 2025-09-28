@@ -10,6 +10,8 @@
     "money"
   ],
   "PhoneNumbers": "*******",
-  "ConnectionTimeout": 300,
-  "ReadTimeout": 2000
+  "ConnectionTimeout": 300000,
+  "ReadTimeout": 300000,
+  "NotifyType": 2,
+  "WeWorkKey": "xxx"
 }
