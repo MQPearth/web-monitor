@@ -57,3 +57,17 @@ Or
 ```
 */30 * * * * /web-monitor/web-monitor -u http://localhost:443 >> /web-monitor/log.txt
 ```
+
+
+#### 构建
+
+
+```bash
+
+mkdir build && cd build
+
+cmake ..
+
+make
+
+```
