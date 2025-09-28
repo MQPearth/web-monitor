@@ -68,6 +68,9 @@ mkdir build && cd build
 
 cmake ..
 
+// or
+cmake -DCMAKE_BUILD_TYPE=Release ..
+
 make
 
 ```
